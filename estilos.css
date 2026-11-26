@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background: #f3f5f9;
+    color: #202938;
+}
+
+.encabezado {
+    background: linear-gradient(135deg, #172554, #1e3a8a, #2563a5);
+    padding: 65px 20px 85px;
+    color: white;
+    text-align: center;
+}
+
+.contenido-header {
+    max-width: 1100px;
+    margin: auto;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: rgba(255,255,255,0.13);
+    border: 1px solid rgba(255,255,255,0.2);
+    padding: 9px 18px;
+    border-radius: 30px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    margin-bottom: 20px;
+}
+
+.encabezado h1 {
+    font-size: 45px;
+    font-weight: 800;
+    margin-bottom: 12px;
+}
+
+.encabezado p {
+    color: #dbeafe;
+    font-size: 16px;
+}
+
+.contenedor {
+    max-width: 1250px;
+    margin: -35px auto 60px;
+    padding: 0 25px;
+}
+
+.resumen {
+    display: flex;
+    gap: 18px;
+    margin-bottom: 30px;
+}
+
+.resumen-info {
+    background: white;
+    padding: 20px 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    min-width: 190px;
+}
+
+.numero {
+    font-size: 27px;
+    font-weight: 800;
+    color: #1e3a8a;
+}
+
+.descripcion {
+    font-size: 12px;
+    color: #778196;
+    font-weight: 600;
+}
+
+.buscador {
+    background: white;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 15px 20px;
+    border-radius: 12px;
+    margin-bottom: 28px;
+    border: 1px solid #e5eaf1;
+}
+
+.buscador span {
+    font-size: 19px;
+}
+
+.buscador input {
+    width: 100%;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    font-family: inherit;
+    color: #202938;
+}
+
+.lista-personas {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.tarjeta {
+    background: white;
+    border-radius: 16px;
+    padding: 24px;
+    border: 1px solid #e9edf4;
+    box-shadow: 0 5px 18px rgba(0,0,0,0.035);
+    transition: 0.25s;
+}
+
+.tarjeta:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0,0,0,0.09);
+}
+
+.persona-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #edf0f5;
+    margin-bottom: 18px;
+}
+
+.avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: #e8efff;
+    color: #1e40af;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    flex-shrink: 0;
+}
+
+.persona-header h2 {
+    font-size: 16px;
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.persona-header span {
+    font-size: 11px;
+    color: #9099a9;
+}
+
+.deseos {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.deseo {
+    display: flex;
+    align-items: flex-start;
+    gap: 13px;
+    background: #f7f9fc;
+    padding: 13px;
+    border-radius: 10px;
+    min-height: 49px;
+}
+
+.deseo span {
+    color: #3157a4;
+    font-size: 12px;
+    font-weight: 800;
+    background: #e7edfa;
+    min-width: 27px;
+    height: 25px;
+    border-radius: 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.deseo p {
+    font-size: 13px;
+    line-height: 1.6;
+    color: #485468;
+    font-weight: 500;
+}
+
+.tarjeta-especial {
+    border: 1px solid #b7c9f5;
+}
+
+.sin-resultados {
+    display: none;
+    text-align: center;
+    padding: 40px;
+    color: #8993a5;
+    font-size: 14px;
+}
+
+footer {
+    text-align: center;
+    padding: 30px 15px;
+    border-top: 1px solid #e5eaf1;
+    background: white;
+    color: #64748b;
+    font-size: 13px;
+}
+
+footer span {
+    display: block;
+    margin-top: 8px;
+    font-size: 11px;
+    color: #a0a8b5;
+}
+
+@media (max-width: 750px) {
+    .lista-personas {
+        grid-template-columns: 1fr;
+    }
+
+    .encabezado {
+        padding: 55px 15px 75px;
+    }
+
+    .encabezado h1 {
+        font-size: 34px;
+    }
+
+    .resumen {
+        flex-wrap: wrap;
+    }
+
+    .resumen-info {
+        flex: 1;
+        min-width: 130px;
+        padding: 17px;
+    }
+
+    .contenedor {
+        padding: 0 15px;
+    }
+}
+
+@media (max-width: 400px) {
+    .tarjeta {
+        padding: 17px;
+    }
+
+    .persona-header h2 {
+        font-size: 14px;
+    }
+
+    .deseo p {
+        font-size: 12px;
+    }
+}

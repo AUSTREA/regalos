@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Deseos</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <header class="encabezado">
+        <div class="contenido-header">
+            <span class="etiqueta">🎄 TEMPORADA NAVIDEÑA 2026</span>
+            <h1>Lista de Deseos</h1>
+            <p>Descubre qué pidió cada persona</p>
+        </div>
+    </header>
+
+    <main class="contenedor">
+        <section class="resumen">
+            <div class="resumen-info">
+                <span class="numero" id="totalPersonas">12</span>
+                <span class="descripcion">Personas registradas</span>
+            </div>
+            <div class="resumen-info">
+                <span class="numero">3</span>
+                <span class="descripcion">Deseos por persona</span>
+            </div>
+        </section>
+
+        <div class="buscador">
+            <span>🔎</span>
+            <input type="text" id="buscar" placeholder="Buscar por nombre..." onkeyup="filtrarPersonas()">
+        </div>
+
+        <section class="lista-personas" id="listaPersonas">
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">E</div><div><h2>Euliser Benjamin</h2><span>22/11/2026 - 19:59</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Audífonos Bluetooth Havi</p></div>
+                    <div class="deseo"><span>02</span><p>Mom jeans pantalones</p></div>
+                    <div class="deseo"><span>03</span><p>Tenis completamente negros que duren</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">N</div><div><h2>Nelita Tale Quevedo</h2><span>22/11/2026 - 20:00</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Uniforme quirúrgico XS que no sea rosado</p></div>
+                    <div class="deseo"><span>02</span><p>Suéter verde musgo o café</p></div>
+                    <div class="deseo"><span>03</span><p>Zapatos blancos</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">K</div><div><h2>Keila</h2><span>22/11/2026 - 22:31</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Pantalón Baggy Comfort negro, azul o celeste</p></div>
+                    <div class="deseo"><span>02</span><p>Tenis Skechers negros o blancos</p></div>
+                    <div class="deseo"><span>03</span><p>Traje formal juvenil de pantalón</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">Y</div><div><h2>Yosi</h2><span>22/11/2026 - 22:47</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Monitor para PC un poco grande y un Pop It muy grande de cualquier figura</p></div>
+                    <div class="deseo"><span>02</span><p>Traje elegante un poco más grande de su talla: saco, camisa blanca, chaleco, pantalón, zapatos elegantes y corbata que combine. Ropa talla 15 o 14 y zapatos talla 37 o 36. También un dumpling (squishy).</p></div>
+                    <div class="deseo"><span>03</span><p>3 pares de pesas: 5, 10 y 15 libras. También un Pop It mediano de cualquier figura.</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">B</div><div><h2>Brayan</h2><span>23/11/2026 - 12:07</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Botines</p></div>
+                    <div class="deseo"><span>02</span><p>Pantalón</p></div>
+                    <div class="deseo"><span>03</span><p>Camisa</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">M</div><div><h2>Mayerli</h2><span>23/11/2026 - 21:08</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Botines negros bonitos</p></div>
+                    <div class="deseo"><span>02</span><p>Tenis blancos o blancos con negro, cómodos</p></div>
+                    <div class="deseo"><span>03</span><p>Pantalón azul de cintura alta que no sea de jaspe</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">M</div><div><h2>Mamá</h2><span>23/11/2026 - 21:12</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Traje stretch floreado</p></div>
+                    <div class="deseo"><span>02</span><p>200</p></div>
+                    <div class="deseo"><span>03</span><p>Zapato cómodo</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">P</div><div><h2>Papá Efraín</h2><span>23/11/2026 - 21:14</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Una mudada de ropa que no sea de personaje</p></div>
+                    <div class="deseo"><span>02</span><p>Pijamas de héroes y pijama</p></div>
+                    <div class="deseo"><span>03</span><p>Auriculares para la tablet</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">A</div><div><h2>Amarilis</h2><span>23/11/2026 - 21:16</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Pijama de héroes</p></div>
+                    <div class="deseo"><span>02</span><p>Mudada de ropa sin personaje</p></div>
+                    <div class="deseo"><span>03</span><p>Tenis</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">A</div><div><h2>Asly</h2><span>23/11/2026 - 21:24</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Botines negros o cafés</p></div>
+                    <div class="deseo"><span>02</span><p>Chaqueta de lona, color opcional</p></div>
+                    <div class="deseo"><span>03</span><p>Pantalón Mom Jeans azul o celeste</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta">
+                <div class="persona-header"><div class="avatar">D</div><div><h2>Darin</h2><span>23/11/2026 - 21:37</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Una chaqueta para el frío</p></div>
+                    <div class="deseo"><span>02</span><p>Ramo de rosas de LEGO para armar o rompecabezas bonito de 1000 piezas</p></div>
+                    <div class="deseo"><span>03</span><p>Mochilita o cartera para trabajar</p></div>
+                </div>
+            </article>
+
+            <article class="tarjeta tarjeta-especial">
+                <div class="persona-header"><div class="avatar">K</div><div><h2>Keiler</h2><span>25/11/2026 - 20:46</span></div></div>
+                <div class="deseos">
+                    <div class="deseo"><span>01</span><p>Mousepad talla XL</p></div>
+                    <div class="deseo"><span>02</span><p>Switch para redes</p></div>
+                    <div class="deseo"><span>03</span><p>Afeitadora eléctrica</p></div>
+                </div>
+            </article>
+        </section>
+
+        <p class="sin-resultados" id="sinResultados">No se encontraron personas con ese nombre.</p>
+    </main>
+
+    <footer>
+        <p>🎁 Lista de deseos familiares · Navidad 2026</p>
+        <span>Hecho con cariño ❤️</span>
+    </footer>
+
+    <script>
+        function filtrarPersonas() {
+            const buscar = document.getElementById("buscar").value.toLowerCase();
+            const tarjetas = document.querySelectorAll(".tarjeta");
+            let encontrados = 0;
+
+            tarjetas.forEach(function(tarjeta) {
+                const nombre = tarjeta.querySelector("h2").textContent.toLowerCase();
+                if (nombre.includes(buscar)) {
+                    tarjeta.style.display = "block";
+                    encontrados++;
+                } else {
+                    tarjeta.style.display = "none";
+                }
+            });
+
+            document.getElementById("sinResultados").style.display =
+                encontrados === 0 ? "block" : "none";
+        }
+
+        document.getElementById("totalPersonas").textContent =
+            document.querySelectorAll(".tarjeta").length;
+    </script>
+</body>
+</html>
